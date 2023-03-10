@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP PAGE</title>
+    <style>
+        .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f8f8;
+}
+
+.otp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.otp h2 {
+  margin-bottom: 20px;
+}
+
+.otp-inputs {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.otp-inputs input {
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.otp-inputs input:focus {
+  outline: none;
+  border: 1px solid #007bff;
+}
+
+#submit-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submit-btn:focus {
+  outline: none;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="otp">
+          <h2>Enter OTP</h2>
+          <div class="otp-inputs">
+            <input type="text" maxlength="1" />
+            <input type="text" maxlength="1" />
+            <input type="text" maxlength="1" />
+            <input type="text" maxlength="1" />
+          </div>
+          <button id="submit-btn">Submit</button>
+        </div>
+      </div>
+      
+</body>
+</html>
+<script>
+    const otpInputs = document.querySelectorAll('.otp-inputs input');
+const submitBtn = document.querySelector('#submit-btn');
+
+otpInputs[0].focus();
+
+otpInputs.forEach((input, index) => {
+  input.addEventListener('keyup', (e) => {
+    if (e.target.value.length === 1) {
+      otpInputs[index + 1].focus();
+    }
+  });
+});
+
+submitBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  const enteredOtp = otpInputs[0].value + otpInputs[1].value + otpInputs[2].value + otpInputs[3].value;
+
+  if (enteredOtp === '1234') {
+    alert('Success');
+    window.location.href ="index.html";
+  } else {
+    alert('Incorrect OTP');
+  }
+});
+
+</script>

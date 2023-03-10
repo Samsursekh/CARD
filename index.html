@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Page</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="credit-card">
+            
+            <div class="card-back">
+                <div class="card-strip"></div>
+                <div class="card-cvv"><strong>CARD CVV</strong></div>
+            </div>
+            <div class="card-front">
+                <div class="card-logo">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNRABA03jKlb13GeR6ElH8ToFlhKZceSDy140azwGo&s" alt="Card Logo">
+                </div>
+               
+                <div class="card-number">•••• •••• •••• ••••</div>
+                <div class="card-info">
+                    <div ><h1 class="card-holder-name">Full Name</h1></div>
+                    <div class="card-expiry"><h3>MM/YY</h3></div>
+                </div>
+            </div>
+        </div>
+        <div class="payment-form">
+            <form action="otp.html" method="post">
+                <label for="card-holder-name">Card Holder Name</label>
+                <input type="text" id="card-holder-name" name="card-holder-name" placeholder="Full Name" required>
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" placeholder="1234 5678 9101 1121" maxlength="16" name="card-number" required>
+                <label for="card-expiry">Card Expiry</label>
+                <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/YY" maxlength="5" required>
+                <label for="card-cvv">Card CVV</label>
+                <input type="text" maxlength="3" id="card-cvv" placeholder="123" name="card-cvv" required>
+                <input type="submit"id="submit" value="Pay">
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+<!-- <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Credit Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h2>Credit Card</h2>
+      </div>
+      <div class="card-body">
+        <div class="card-number">•••• •••• •••• ••••</div>
+        <div class="card-info">
+          <div class="card-holder">Full Name</div>
+          <div class="card-expiry">MM/YY</div>
+        </div>
+      </div>
+    </div>
+    <div class="form">
+      <form id="payment-form">
+        <label for="card-number">Card Number</label>
+        <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9101 1121" maxlength="19" required>
+        <label for="card-holder">Card Holder</label>
+        <input type="text" id="card-holder" name="card-holder" placeholder="Full Name" required>
+        <div class="expiry-cvc">
+          <div class="expiry">
+            <label for="expiry">Expiry Date</label>
+            <input type="text" id="expiry" name="expiry" placeholder="MM/YY" maxlength="5" required>
+          </div>
+          <div class="cvc">
+            <label for="cvc">CVC</label>
+            <input type="text" id="cvc" name="cvc" placeholder="123" maxlength="3" required>
+          </div>
+        </div>
+        <button type="submit" id="submit">Pay</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html> -->
+
